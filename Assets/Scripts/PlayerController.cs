@@ -12,12 +12,14 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float verticalClamp = 80f;
 
     private Rigidbody rb;
+    private ObjectPickup objectPickup;
     private Vector2 movementVector;
     private Vector2 lookVector;
     private float verticalRotation = 0f;
 
     private void Awake() {
         rb = GetComponent<Rigidbody>();
+        objectPickup = GetComponent<ObjectPickup>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -28,6 +30,10 @@ public class PlayerController : MonoBehaviour {
 
     public void OnLook(InputValue value) {
         lookVector = value.Get<Vector2>();
+    }
+
+    public void OnInteract(InputValue value) {
+        objectPickup.TryInteract();
     }
 
     private void FixedUpdate() {
