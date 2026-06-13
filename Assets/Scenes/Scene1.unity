@@ -2107,6 +2107,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5843949607227148456, guid: 2f738b8888fcff846ae82a69cab1340d, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: bc43605b-4394-400a-9f38-3cc8681385a1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
